@@ -1,8 +1,11 @@
 package com.course.practicaljava.entity;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Car {
+
+	private List<String> additions;
 
 	private boolean available;
 
@@ -27,6 +30,10 @@ public class Car {
 		this.type = type;
 	}
 
+	public List<String> getAdditions() {
+		return additions;
+	}
+
 	public String getBrand() {
 		return brand;
 	}
@@ -49,6 +56,10 @@ public class Car {
 
 	public boolean isAvailable() {
 		return available;
+	}
+
+	public void setAdditions(List<String> additions) {
+		this.additions = additions;
 	}
 
 	public void setAvailable(boolean available) {

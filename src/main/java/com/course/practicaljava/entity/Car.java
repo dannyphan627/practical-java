@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Car {
 
-	private List<String> additions;
+	private List<String> additionalFeatures;
 
 	private boolean available;
 
@@ -13,9 +13,13 @@ public class Car {
 
 	private String color;
 
+	private Engine engine;
+
 	private LocalDate firstReleaseDate;
 
 	private int price;
+
+	private List<Tire> tires;
 
 	private String type;
 
@@ -31,7 +35,7 @@ public class Car {
 	}
 
 	public List<String> getAdditions() {
-		return additions;
+		return additionalFeatures;
 	}
 
 	public String getBrand() {
@@ -42,12 +46,20 @@ public class Car {
 		return color;
 	}
 
+	public Engine getEngine() {
+		return engine;
+	}
+
 	public LocalDate getFirstReleaseDate() {
 		return firstReleaseDate;
 	}
 
 	public int getPrice() {
 		return price;
+	}
+
+	public List<Tire> getTires() {
+		return tires;
 	}
 
 	public String getType() {
@@ -58,8 +70,8 @@ public class Car {
 		return available;
 	}
 
-	public void setAdditions(List<String> additions) {
-		this.additions = additions;
+	public void setAdditions(List<String> additionalFeatures) {
+		this.additionalFeatures = additionalFeatures;
 	}
 
 	public void setAvailable(boolean available) {
@@ -74,6 +86,10 @@ public class Car {
 		this.color = color;
 	}
 
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
+
 	public void setFirstReleaseDate(LocalDate firstReleaseDate) {
 		this.firstReleaseDate = firstReleaseDate;
 	}
@@ -82,14 +98,19 @@ public class Car {
 		this.price = price;
 	}
 
+	public void setTires(List<Tire> tires) {
+		this.tires = tires;
+	}
+
 	public void setType(String type) {
 		this.type = type;
 	}
 
 	@Override
 	public String toString() {
-		return "Car [brand=" + brand + ", color=" + color + ", type=" + type + ", price=" + price + ", available="
-				+ available + ", firstReleaseDate=" + firstReleaseDate + "]";
+		return "Car [additionalFeatures=" + additionalFeatures + ", available=" + available + ", brand=" + brand
+				+ ", color=" + color + ", engine=" + engine + ", firstReleaseDate=" + firstReleaseDate + ", price="
+				+ price + ", tires=" + tires + ", type=" + type + "]";
 	}
 
 }
